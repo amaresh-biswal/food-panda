@@ -9,7 +9,7 @@ export default function Card() {
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <div className="container w-100">
-                        <select className='m-2 h-100 bg-success rounded'>
+                        <select className='m-2 h-100 bg-primary rounded'>
                             {
                                 Array.from(Array(6), (e, i) => {
                                     return (
@@ -18,7 +18,7 @@ export default function Card() {
                                 })
                             }
                         </select>
-                        <select className='m-2 h-100 bg-success rounded'>
+                        <select className='m-2 h-100 bg-primary rounded'>
                             <option value={"half"}>Half</option>
                             <option value={"full"}>Full</option>
                         </select>

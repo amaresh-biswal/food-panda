@@ -30,7 +30,7 @@ export default function SignUp() {
     }
 
     return (
-        <div className='container'>
+        <div className='container bg-primary'>
             <form onSubmit={handleSubmit}>
                 <div className="form-group mt-2">
                     <label htmlFor="name">Name</label>
@@ -39,7 +39,7 @@ export default function SignUp() {
                 <div className="form-group mt-2">
                     <label htmlFor="exampleInputEmail1">Email address</label>
                     <input type="email" className="form-control" name='email' value={credentials.email} onChange={handleChange} id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <small id="emailHelp" className="form-text" style={{color:"white"}}>We'll never share your email with anyone else.</small>
                 </div>
                 <div className="form-group mt-2">
                     <label htmlFor="exampleInputPassword1">Password</label>
@@ -50,7 +50,7 @@ export default function SignUp() {
                     <input type="text" className="form-control" name='geolocation' value={credentials.geolocation} onChange={handleChange} placeholder='Enter your address' />
                 </div>
                 <button type="submit" className="btn btn-success m-2">Submit</button>
-                <Link to="/login" className='btn btn-primary m-2'>Already a user</Link>
+                <Link to="/login" className='btn btn-danger m-2'>Already a user</Link>
             </form>
         </div>
     )
