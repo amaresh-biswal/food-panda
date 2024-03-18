@@ -4,15 +4,18 @@ import Login from './screens/Login';
 
 import { Route, Routes } from 'react-router-dom';
 import SignUp from './screens/SignUp';
+import { CartProvider } from './components/ContextReducer';
 
 function App() {
   return (
     <>
-    <Routes>
-      <Route exact path='/' element={<Home/>} />
-      <Route exact path='/login' element={<Login/>} />
-      <Route exact path='/createuser' element={<SignUp/>} />
-    </Routes>
+      <CartProvider>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/login' element={<Login />} />
+          <Route exact path='/createuser' element={<SignUp />} />
+        </Routes>
+      </CartProvider>
     </>
   );
 }
